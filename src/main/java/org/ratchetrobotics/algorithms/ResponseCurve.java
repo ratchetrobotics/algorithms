@@ -19,7 +19,7 @@ import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
  * @version 1.0
  */
 public class ResponseCurve {
-    private float[][] bucketValues;
+    private CartesianCoordinate[] bucketValues;
 
     /**
      * Construct a ResponseCurve from values
