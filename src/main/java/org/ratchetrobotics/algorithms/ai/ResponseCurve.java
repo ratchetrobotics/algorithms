@@ -7,7 +7,11 @@
 
 package org.ratchetrobotics.algorithms.ai;
 
+import org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunction;
 import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
+import org.apache.commons.math3.analysis.interpolation.SplineInterpolator;
+
+import java.util.ArrayList;
 
 /**
  * This class implements a bucketed response curve.
@@ -19,15 +23,18 @@ import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
  * @version 1.0
  */
 public class ResponseCurve {
-    private Bucket[] bucketValues;
+    SplineInterpolator splineInterpolator;
+    PolynomialSplineFunction splineFunction;
 
     /**
-     * Construct a ResponseCurve from values
+     * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
      *
-     * @param bucketValues an array of coordinates of the left-top bucket edges.
+     * @param x x-values of curve points
+     * @param y y-values of curve points
      */
-    public ResponseCurve(Bucket[] bucketValues) {
-        this.bucketValues = bucketValues;
+    public ResponseCurve(double[] x, double[] y) {
+        this.splineInterpolator = new SplineInterpolator();
+        this.splineFunction = this.splineInterpolator.interpolate(x, y);
     }
 
     /**
@@ -36,6 +43,7 @@ public class ResponseCurve {
      * @param stimulus the stimulus to respond to.
      * @return the response to the stimulus.
      */
-    public float respond(float stimulus) {
+    public double respond(double stimulus) {
+        return this.splineFunction.value(stimulus);
     }
 }
