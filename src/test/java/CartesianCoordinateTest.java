@@ -16,4 +16,10 @@ public class CartesianCoordinateTest {
         CartesianCoordinate coordinate = new CartesianCoordinate(1,3);
         assertEquals("getX should return 1 when x in the constructor was 1", 1, coordinate.getX(), 0.0/*ε, a small fudge for doubles*/);
     }
+
+    @Test
+    public void storesYCoordinates() {
+        CartesianCoordinate coordinate = new CartesianCoordinate(1,3);
+        assertEquals("gety should return 2 when y in the constructor was 2", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
+    }
 }
