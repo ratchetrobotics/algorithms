@@ -20,6 +20,20 @@ public class CartesianCoordinateTest {
     @Test
     public void storesYCoordinates() {
         CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
-        assertEquals("gety should return 2 when y in the constructor was 2", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
+        assertEquals("getY should return 2 when y in the constructor was 2", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
+    }
+
+    @Test
+    public void settableXCoordinates() {
+        CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
+        coordinate.setX(8);
+        assertEquals("getX should return 8 when x in the constructor was 1 but was overriden with 8 by setX", 8, coordinate.getX(), 0.0/*ε, a small fudge for doubles*/);
+    }
+
+    @Test
+    public void settableYCoordinates() {
+        CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
+        coordinate.setY(10);
+        assertEquals("getY should return 10 when y in the constructor was 2 but was overriden with 10 by setY", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
     }
 }
