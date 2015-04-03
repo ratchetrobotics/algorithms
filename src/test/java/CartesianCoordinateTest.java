@@ -34,6 +34,6 @@ public class CartesianCoordinateTest {
     public void settableYCoordinates() {
         CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
         coordinate.setY(10);
-        assertEquals("getY should return 10 when y in the constructor was 2 but was overriden with 10 by setY", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
+        assertEquals("getY should return 10 when y in the constructor was 2 but was overriden with 10 by setY", 10, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
     }
 }
