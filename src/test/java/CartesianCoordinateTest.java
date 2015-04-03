@@ -13,13 +13,13 @@ import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
 public class CartesianCoordinateTest {
     @Test
     public void storesXCoordinates() {
-        CartesianCoordinate coordinate = new CartesianCoordinate(1,3);
+        CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
         assertEquals("getX should return 1 when x in the constructor was 1", 1, coordinate.getX(), 0.0/*ε, a small fudge for doubles*/);
     }
 
     @Test
     public void storesYCoordinates() {
-        CartesianCoordinate coordinate = new CartesianCoordinate(1,3);
+        CartesianCoordinate coordinate = new CartesianCoordinate(1,2);
         assertEquals("gety should return 2 when y in the constructor was 2", 2, coordinate.getY(), 0.0/*ε, a small fudge for doubles*/);
     }
 }
