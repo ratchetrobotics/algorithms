@@ -5,7 +5,7 @@
  *     under certain conditions; type `show c' for details.
  */
 
-package org.ratchetrobotics.algorithms;
+package org.ratchetrobotics.algorithms.ai;
 
 import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
 
@@ -19,15 +19,23 @@ import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
  * @version 1.0
  */
 public class ResponseCurve {
-    private CartesianCoordinate[] bucketValues;
+    private Bucket[] bucketValues;
 
     /**
      * Construct a ResponseCurve from values
+     *
      * @param bucketValues an array of coordinates of the left-top bucket edges.
      */
-    public ResponseCurve(CartesianCoordinate[] bucketValues) {
+    public ResponseCurve(Bucket[] bucketValues) {
         this.bucketValues = bucketValues;
     }
 
-    public float
+    /**
+     * Respond to a stimulus.
+     *
+     * @param stimulus the stimulus to respond to.
+     * @return the response to the stimulus.
+     */
+    public float respond(float stimulus) {
+    }
 }
