@@ -8,6 +8,10 @@
 package org.ratchetrobotics.algorithms.util;
 
 /**
+ * A point.
+ * 
+ * Used in some of our pathfinding and AI implementations. 
+ *
  * @author Liam Marshall (archimedespi on Keybase)
  */
 public class CartesianCoordinate {
