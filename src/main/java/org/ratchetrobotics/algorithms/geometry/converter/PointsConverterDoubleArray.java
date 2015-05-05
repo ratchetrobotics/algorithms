@@ -12,11 +12,11 @@ package org.ratchetrobotics.algorithms.geometry.converter;
  * @author Liam Marshall (archimedespi at Keybase)
  * @version 1.0
  */
-public class PointConverterDoubleArray {
+public class PointsConverterDoubleArray {
 	private double[] x;
 	private double[] y;
 
-	public PointConverterDoubleArray(double[] x, double[] y) {
+	public PointsConverterDoubleArray(double[] x, double[] y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -24,7 +24,7 @@ public class PointConverterDoubleArray {
 	public double[] getX() {
 		return x;
 	}
-	
+
 	public double[] getY() {
 		return y;
 	}

@@ -21,7 +21,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 public class PointsConverter {
 	private List<Vector2D> points;
 
-	public PointConverter(List<Vector2D> points) {
+	public PointsConverter(List<Vector2D> points) {
 		this.points = points;
 	}
 
@@ -34,7 +34,7 @@ public class PointsConverter {
 			y.add(point.getY());
 		});
 
-		return new PointConverterDoubleArray(
+		return new PointsConverterDoubleArray(
 			ArrayUtils.toPrimitive(x.toArray(new Double[0])),
 			ArrayUtils.toPrimitive(y.toArray(new Double[0])));
 	}
