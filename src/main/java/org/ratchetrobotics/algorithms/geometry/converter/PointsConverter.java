@@ -18,14 +18,14 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
  * @author Liam Marshall (archimedespi at Keybase)
  * @version 1.0
  */
-public class PointConverter {
+public class PointsConverter {
 	private List<Vector2D> points;
 
 	public PointConverter(List<Vector2D> points) {
 		this.points = points;
 	}
 
-	public PointConverterDoubleArray toDoubleArrays() {
+	public PointsConverterDoubleArray toDoubleArrays() {
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
 
