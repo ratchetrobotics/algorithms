@@ -7,7 +7,8 @@ package org.ratchetrobotics.algorithms.geometry.converter;
 
 import java.util.List;
 import java.util.ArrayList;
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.stream.*;
+import com.google.common.primitives.Doubles;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
 /**
@@ -25,17 +26,10 @@ public class PointsConverter {
 		this.points = points;
 	}
 
-	public PointsConverterDoubleArray toDoubleArrays() {
-		List<Double> x = new ArrayList<Double>();
-		List<Double> y = new ArrayList<Double>();
+	public PointsConverterDoubleArrays toDoubleArrays() {
+		List<Double> x = points.stream().map(p -> p.getX()).collect(Collectors.toList());
+		List<Double> y = points.stream().map(p -> p.getY()).collect(Collectors.toList());
 
-		points.stream().forEach((point) -> {
-			x.add(point.getX());
-			y.add(point.getY());
-		});
-
-		return new PointsConverterDoubleArray(
-			ArrayUtils.toPrimitive(x.toArray(new Double[0])),
-			ArrayUtils.toPrimitive(y.toArray(new Double[0])));
+		return new PointsConverterDoubleArrays(Doubles.toArray(x), Doubles.toArray(y));
 	}
 }
