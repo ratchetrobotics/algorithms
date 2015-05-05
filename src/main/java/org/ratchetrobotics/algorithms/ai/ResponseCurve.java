@@ -8,7 +8,6 @@
 package org.ratchetrobotics.algorithms.ai;
 
 import org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunction;
-import org.ratchetrobotics.algorithms.util.CartesianCoordinate;
 import org.apache.commons.math3.analysis.interpolation.SplineInterpolator;
 
 import java.util.ArrayList;
