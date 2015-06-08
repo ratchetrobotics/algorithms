@@ -7,6 +7,11 @@ package org.ratchetrobotics.algorithms.ai;
 
 import org.apache.commons.math3.analysis.polynomials.PolynomialSplineFunction;
 import org.apache.commons.math3.analysis.interpolation.SplineInterpolator;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.ratchetrobotics.algorithms.geometry.converter.PointsConverter;
+import org.ratchetrobotics.algorithms.geometry.converter.PointsConverterDoubleArray;
+
+import java.util.List;
 
 /**
  * This class implements a bucketed response curve.
@@ -30,6 +35,17 @@ public class ResponseCurve {
     public ResponseCurve(double[] x, double[] y) {
         this.splineInterpolator = new SplineInterpolator();
         this.splineFunction = this.splineInterpolator.interpolate(x, y);
+    }
+
+    /**
+     * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
+     *
+     * @param points points in the curve
+     */
+    public ResponseCurve(List<Vector2D> points) {
+        PointsConverterDoubleArray doublePoints = new PointsConverter(points).toDoubleArrays();
+        this.splineInterpolator = new SplineInterpolator();
+        this.splineFunction = this.splineInterpolator.interpolate(doublePoints.getX(), doublePoints.getY());
     }
 
     /**
