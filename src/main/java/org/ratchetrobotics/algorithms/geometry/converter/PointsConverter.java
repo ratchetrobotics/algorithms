@@ -19,7 +19,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
  * @version 1.0
  */
 public class PointsConverter {
-	private List<Vector2D> points;
+	private final List<Vector2D> points;
 
 	public PointsConverter(List<Vector2D> points) {
 		this.points = points;

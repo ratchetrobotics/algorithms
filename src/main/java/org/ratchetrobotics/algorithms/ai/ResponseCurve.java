@@ -23,8 +23,8 @@ import java.util.List;
  * @version 1.0
  */
 public class ResponseCurve {
-    SplineInterpolator splineInterpolator;
-    PolynomialSplineFunction splineFunction;
+    private final SplineInterpolator splineInterpolator;
+    private final PolynomialSplineFunction splineFunction;
 
     /**
      * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.

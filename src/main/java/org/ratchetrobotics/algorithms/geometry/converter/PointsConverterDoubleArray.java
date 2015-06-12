@@ -13,8 +13,8 @@ package org.ratchetrobotics.algorithms.geometry.converter;
  * @version 1.0
  */
 public class PointsConverterDoubleArray {
-	private double[] x;
-	private double[] y;
+	private final double[] x;
+	private final double[] y;
 
 	public PointsConverterDoubleArray(double[] x, double[] y) {
 		this.x = x;
