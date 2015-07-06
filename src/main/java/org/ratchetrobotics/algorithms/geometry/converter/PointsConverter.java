@@ -26,8 +26,8 @@ public class PointsConverter {
 	}
 
 	public PointsConverterDoubleArray toDoubleArrays() {
-		List<Double> x = new ArrayList<Double>();
-		List<Double> y = new ArrayList<Double>();
+		List<Double> x = new ArrayList<>();
+		List<Double> y = new ArrayList<>();
 
 		points.stream().forEach((point) -> {
 			x.add(point.getX());
@@ -35,7 +35,7 @@ public class PointsConverter {
 		});
 
 		return new PointsConverterDoubleArray(
-			ArrayUtils.toPrimitive(x.toArray(new Double[0])),
-			ArrayUtils.toPrimitive(y.toArray(new Double[0])));
+			ArrayUtils.toPrimitive(x.toArray(new Double[x.size()])),
+			ArrayUtils.toPrimitive(y.toArray(new Double[y.size()])));
 	}
 }
