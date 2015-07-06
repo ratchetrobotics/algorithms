@@ -6,7 +6,6 @@
 import org.junit.Test;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.ratchetrobotics.algorithms.geometry.converter.PointsConverter;
 
@@ -15,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class PointsConverterTest {
 	@Test
 	public void convertVector2DToDoubleArrayShouldPreserveCoordinates() {
-		List<Vector2D> points = new ArrayList<Vector2D>();
+		List<Vector2D> points = new ArrayList<>();
 		points.add(new Vector2D(1, 1));
 		points.add(new Vector2D(2, 2));
 		points.add(new Vector2D(3, 3));

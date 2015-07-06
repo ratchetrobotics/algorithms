@@ -25,7 +25,7 @@ public class ResponseCurveTest {
     }
 
     public void aVector2DShouldInterpolateToItself() {
-        List<Vector2D> points = new ArrayList<Vector2D>();
+        List<Vector2D> points = new ArrayList<>();
         points.add(new Vector2D(0, 0));
         points.add(new Vector2D(1, 1));
         points.add(new Vector2D(2, 2));
