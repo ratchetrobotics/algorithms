@@ -1,4 +1,7 @@
 language: java
 jdk:
-  - oraclejdk8
-after_success: ./gradlew jacocoTestReport coveralls
+- oraclejdk8
+after_success: "./gradlew jacocoTestReport coveralls"
+notifications:
+  slack:
+    secure: ImlO6SVOgIPcQOdpsppMTVGxwRdQ9NoQL+dZVC2mDGE13j27EYkJq5/WGVkNX8m3k++LRJTD32dMEzvsT4pzw8okcMiX+ahTjT7yhbHi650WYdwH06PcAi+MWsu6hp+ft7JfWntiIykPXJTL0tqW1urb1Y8xfYO43AqdsgVd48c=
