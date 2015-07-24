@@ -29,10 +29,10 @@ public class PointsConverter {
 		List<Double> x = new ArrayList<>();
 		List<Double> y = new ArrayList<>();
 
-		points.stream().forEach((point) -> {
-			x.add(point.getX());
-			y.add(point.getY());
-		});
+		for (Vector2D point : points) {
+            x.add(point.getX());
+            y.add(point.getY());
+        }
 
 		return new PointsConverterDoubleArray(
 			ArrayUtils.toPrimitive(x.toArray(new Double[x.size()])),
