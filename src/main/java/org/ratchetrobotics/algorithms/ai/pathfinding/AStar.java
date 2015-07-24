@@ -1,7 +1,10 @@
 package org.ratchetrobotics.algorithms.ai.pathfinding;
 
 /**
- * Created by liam on 6/8/15.
+ * This class implements A* for an arbitrary <code>PositionMesh</code>.
+ *
+ * @author Liam Marshall (archimedespi at Keybase)
+ * @version 1.0
  */
 public class AStar {
     public AStar(PathingMap pathingMap, AStarHeuristic heuristic) {
