@@ -7,7 +7,7 @@ package org.ratchetrobotics.algorithms.ai.pathfinding;
  * @version 1.0
  */
 public class AStar {
-    public AStar(PathingMap pathingMap, AStarHeuristic heuristic) {
+    public AStar(AStarHeuristic heuristic) {
 
     }
 }
