@@ -24,6 +24,7 @@ public class ResponseCurveTest {
         assertEquals("respond(2.0) for y 2.0 should be 2.0", 2.0, responseCurve.respond(2.0), 0.0/*ε, a small fudge for doubles*/);
     }
 
+    @Test
     public void aVector2DShouldInterpolateToItself() {
         List<Vector2D> points = new ArrayList<>();
         points.add(new Vector2D(0, 0));
