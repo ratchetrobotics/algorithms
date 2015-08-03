@@ -1,8 +1,10 @@
+/*
+ * algorithms  Copyright (C) 2015 Ratchet Robotics
+ *  Licensed under the BSD license.
+ */
+
 package org.ratchetrobotics.algorithms.ai.pathfinding;
 
-/**
- * Created by liam on 6/8/15.
- */
 public interface AStarHeuristic {
     public float getCost();
 }

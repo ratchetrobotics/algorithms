@@ -1,3 +1,8 @@
+/*
+ * algorithms  Copyright (C) 2015 Ratchet Robotics
+ *  Licensed under the BSD license.
+ */
+
 package org.ratchetrobotics.algorithms.ai.mapping;
 
 /**
@@ -14,4 +19,6 @@ package org.ratchetrobotics.algorithms.ai.mapping;
  * @version 1.0
  */
 public class FieldMap {
+    public FieldMap() {
+    }
 }
