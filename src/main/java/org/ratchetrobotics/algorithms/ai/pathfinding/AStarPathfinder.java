@@ -6,8 +6,7 @@ package org.ratchetrobotics.algorithms.ai.pathfinding;
  * @author Liam Marshall (archimedespi at Keybase)
  * @version 1.0
  */
-public class AStar {
-    public AStar(AStarHeuristic heuristic) {
-
+public class AStarPathfinder {
+    public AStarPathfinder(FieldMap map, AStarHeuristic heuristic) {
     }
 }
