@@ -1,5 +1,7 @@
 package org.ratchetrobotics.algorithms.ai.pathfinding;
 
+import org.ratchetrobotics.algorithms.ai.mapping.FieldMap;
+
 /**
  * This class implements A* for an arbitrary <code>PositionMesh</code>.
  *
