@@ -3,7 +3,11 @@
  *  Licensed under the BSD license.
  */
 
-package org.ratchetrobotics.algorithms.ai.mapping;
+package org.ratchetrobotics.algorithms.mapping;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.geojson.FeatureCollection;
+
+import java.io.IOException;
 
 /**
  * The FieldMap's purpose is to take data from a GeoJSON file,
@@ -19,6 +23,16 @@ package org.ratchetrobotics.algorithms.ai.mapping;
  * @version 1.0
  */
 public class FieldMap {
-    public FieldMap() {
+    FeatureCollection geoJSONFeatures;
+    public FieldMap(String mapString) {
+        try {
+            geoJSONFeatures = new ObjectMapper().readValue(mapString, FeatureCollection.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public FeatureCollection getFeatureCollection() {
+        return this.geoJSONFeatures;
     }
 }
