@@ -3,14 +3,12 @@
  * Licensed under the BSD license.
  */
 
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.junit.Test;
+import static org.junit.Assert.*;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.ratchetrobotics.algorithms.ai.ResponseCurve;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 public class ResponseCurveTest {
     @Test

@@ -4,12 +4,11 @@
  */
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 import java.util.List;
 import java.util.ArrayList;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.ratchetrobotics.algorithms.geometry.converter.PointsConverter;
-
-import static org.junit.Assert.assertEquals;
 
 public class PointsConverterTest {
 	@Test
