@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id 'findbugs'
     id 'com.github.kt3k.coveralls' version '2.0.1'
 }
 
@@ -13,6 +14,10 @@ jacocoTestReport {
 		xml.enabled = true
 		html.enabled = true
 	}
+}
+
+findbugs {
+    ignoreFailures = true
 }
 
 test {
