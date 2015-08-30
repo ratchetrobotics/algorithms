@@ -4,13 +4,16 @@
  */
 
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.ratchetrobotics.algorithms.mapping.FieldMap;
+
+import java.io.IOException;
+
+import static org.junit.Assert.assertNotNull;
 
 
 public class FieldMapTest {
     @Test
-    public void itShouldNotBarfOnValidInput() {
+    public void itShouldNotBarfOnValidInput() throws IOException {
         String someGeoJSON = "{ \"type\": \"FeatureCollection\",\n" +
                 "  \"features\": [\n" +
                 "    { \"type\": \"Feature\",\n" +
@@ -26,7 +29,6 @@ public class FieldMapTest {
                 "        },\n" +
                 "      \"properties\": {\n" +
                 "        \"prop0\": \"value0\",\n" +
-                "        \"prop1\": 0.0\n" +
                 "        }\n" +
                 "     }\n" +
                 "     ]\n" +
