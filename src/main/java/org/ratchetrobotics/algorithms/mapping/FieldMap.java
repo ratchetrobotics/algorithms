@@ -4,10 +4,12 @@
  */
 
 package org.ratchetrobotics.algorithms.mapping;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.geojson.FeatureCollection;
+
+import org.geotools.feature.FeatureCollection;
+import org.geotools.geojson.feature.FeatureJSON;
 
 import java.io.IOException;
+import java.io.StringReader;
 
 /**
  * The FieldMap's purpose is to take data from a GeoJSON file,
@@ -23,16 +25,15 @@ import java.io.IOException;
  * @version 1.0
  */
 public class FieldMap {
-    FeatureCollection geoJSONFeatures;
-    public FieldMap(String mapString) {
-        try {
-            geoJSONFeatures = new ObjectMapper().readValue(mapString, FeatureCollection.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    FeatureJSON fjson;
+    FeatureCollection geoJsonFeatures;
+
+    public FieldMap(String mapString) throws IOException {
+        fjson = new FeatureJSON();
+        geoJsonFeatures = fjson.readFeatureCollection(new StringReader(mapString));
     }
 
     public FeatureCollection getFeatureCollection() {
-        return this.geoJSONFeatures;
+        return this.geoJsonFeatures;
     }
 }
