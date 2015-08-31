@@ -9,6 +9,7 @@ import org.geotools.feature.FeatureCollection;
 import org.geotools.geojson.feature.FeatureJSON;
 
 import java.io.IOException;
+import java.io.Reader;
 import java.io.StringReader;
 
 /**
@@ -31,6 +32,11 @@ public class FieldMap {
     public FieldMap(String mapString) throws IOException {
         fjson = new FeatureJSON();
         geoJsonFeatures = fjson.readFeatureCollection(new StringReader(mapString));
+    }
+
+    public FieldMap(Reader reader) throws IOException {
+        fjson = new FeatureJSON();
+        geoJsonFeatures = fjson.readFeatureCollection(reader);
     }
 
     public FeatureCollection getFeatureCollection() {
