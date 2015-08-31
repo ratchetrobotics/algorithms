@@ -23,38 +23,38 @@ import java.util.List;
  * @version 1.0
  */
 public class ResponseCurve {
-    private final SplineInterpolator splineInterpolator;
-    private final PolynomialSplineFunction splineFunction;
+  private final SplineInterpolator splineInterpolator;
+  private final PolynomialSplineFunction splineFunction;
 
-    /**
-     * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
-     *
-     * @param x x-values of curve points
-     * @param y y-values of curve points
-     */
-    public ResponseCurve(double[] x, double[] y) {
-        this.splineInterpolator = new SplineInterpolator();
-        this.splineFunction = this.splineInterpolator.interpolate(x, y);
-    }
+  /**
+   * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
+   *
+   * @param x x-values of curve points
+   * @param y y-values of curve points
+   */
+  public ResponseCurve(double[] x, double[] y) {
+    this.splineInterpolator = new SplineInterpolator();
+    this.splineFunction = this.splineInterpolator.interpolate(x, y);
+  }
 
-    /**
-     * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
-     *
-     * @param points points in the curve
-     */
-    public ResponseCurve(List<Vector2D> points) {
-        PointsConverterDoubleArray doublePoints = new PointsConverter(points).toDoubleArrays();
-        this.splineInterpolator = new SplineInterpolator();
-        this.splineFunction = this.splineInterpolator.interpolate(doublePoints.getX(), doublePoints.getY());
-    }
+  /**
+   * Constructs a <code>ResponseCurve</code> by interpolating arrays of curve points.
+   *
+   * @param points points in the curve
+   */
+  public ResponseCurve(List<Vector2D> points) {
+    PointsConverterDoubleArray doublePoints = new PointsConverter(points).toDoubleArrays();
+    this.splineInterpolator = new SplineInterpolator();
+    this.splineFunction = this.splineInterpolator.interpolate(doublePoints.getX(), doublePoints.getY());
+  }
 
-    /**
-     * Respond to a stimulus.
-     *
-     * @param stimulus the stimulus to respond to.
-     * @return the response to the stimulus.
-     */
-    public double respond(double stimulus) {
-        return this.splineFunction.value(stimulus);
-    }
+  /**
+   * Respond to a stimulus.
+   *
+   * @param stimulus the stimulus to respond to.
+   * @return the response to the stimulus.
+   */
+  public double respond(double stimulus) {
+    return this.splineFunction.value(stimulus);
+  }
 }

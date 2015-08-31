@@ -6,5 +6,5 @@
 package org.ratchetrobotics.algorithms.ai.pathfinding;
 
 public interface AStarHeuristic {
-    public float getCost();
+  public float getCost();
 }

@@ -26,20 +26,20 @@ import java.io.StringReader;
  * @version 1.0
  */
 public class FieldMap {
-    FeatureJSON fjson;
-    FeatureCollection geoJsonFeatures;
+  FeatureJSON fjson;
+  FeatureCollection geoJsonFeatures;
 
-    public FieldMap(String mapString) throws IOException {
-        fjson = new FeatureJSON();
-        geoJsonFeatures = fjson.readFeatureCollection(new StringReader(mapString));
-    }
+  public FieldMap(String mapString) throws IOException {
+    fjson = new FeatureJSON();
+    geoJsonFeatures = fjson.readFeatureCollection(new StringReader(mapString));
+  }
 
-    public FieldMap(Reader reader) throws IOException {
-        fjson = new FeatureJSON();
-        geoJsonFeatures = fjson.readFeatureCollection(reader);
-    }
+  public FieldMap(Reader reader) throws IOException {
+    fjson = new FeatureJSON();
+    geoJsonFeatures = fjson.readFeatureCollection(reader);
+  }
 
-    public FeatureCollection getFeatureCollection() {
-        return this.geoJsonFeatures;
-    }
+  public FeatureCollection getFeatureCollection() {
+    return this.geoJsonFeatures;
+  }
 }

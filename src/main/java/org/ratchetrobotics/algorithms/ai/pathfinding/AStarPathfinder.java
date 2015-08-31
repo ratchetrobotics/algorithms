@@ -14,6 +14,6 @@ import org.ratchetrobotics.algorithms.mapping.FieldMap;
  * @version 1.0
  */
 public class AStarPathfinder {
-    public AStarPathfinder(FieldMap map, AStarHeuristic heuristic) {
-    }
+  public AStarPathfinder(FieldMap map, AStarHeuristic heuristic) {
+  }
 }

@@ -19,23 +19,23 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
  * @version 1.0
  */
 public class PointsConverter {
-	private final List<Vector2D> points;
+  private final List<Vector2D> points;
 
-	public PointsConverter(List<Vector2D> points) {
-		this.points = points;
-	}
+  public PointsConverter(List<Vector2D> points) {
+    this.points = points;
+  }
 
-	public PointsConverterDoubleArray toDoubleArrays() {
-		List<Double> x = new ArrayList<>();
-		List<Double> y = new ArrayList<>();
+  public PointsConverterDoubleArray toDoubleArrays() {
+    List<Double> x = new ArrayList<>();
+    List<Double> y = new ArrayList<>();
 
-		for (Vector2D point : points) {
-            x.add(point.getX());
-            y.add(point.getY());
-        }
+    for (Vector2D point : points) {
+      x.add(point.getX());
+      y.add(point.getY());
+    }
 
-		return new PointsConverterDoubleArray(
-			ArrayUtils.toPrimitive(x.toArray(new Double[x.size()])),
-			ArrayUtils.toPrimitive(y.toArray(new Double[y.size()])));
-	}
+    return new PointsConverterDoubleArray(
+             ArrayUtils.toPrimitive(x.toArray(new Double[x.size()])),
+             ArrayUtils.toPrimitive(y.toArray(new Double[y.size()])));
+  }
 }
