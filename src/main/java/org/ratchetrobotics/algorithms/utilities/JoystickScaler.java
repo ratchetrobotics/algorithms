@@ -9,13 +9,13 @@ public class JoystickScaler {
   private ResponseCurve responseCurve;
 
   public JoystickScaler() {
-    responseCurve = new ResponseCurve(new double[]{0.0, 0.1, 0.25, 0.75, 1.0},
-      new double[]{0.0, 0.01, 0.3, 0.8, 1});
+    responseCurve = new ResponseCurve(new double[]{0.0, 0.25, 0.75, 1.0},
+      new double[]{0.0, 0.3, 0.8, 1});
   }
 
   public double in(double input) {
     // deadbands
-    if (0.07 < input && input < 0.07) {
+    if (0.1 < input && input < 0.1) {
       return 0;
     }
     // there is a good reason for all the Math.abs on the next line.
