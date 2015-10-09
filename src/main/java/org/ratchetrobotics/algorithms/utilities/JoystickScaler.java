@@ -14,7 +14,7 @@ public class JoystickScaler {
   }
 
   public double in(double input) {
-    double response = responseCurve.respond(Math.abs(input));
+    double response = Math.abs(responseCurve.respond(Math.abs(input)));
     return (input > 0) ? (response) : (-response);
   }
 }
