@@ -15,7 +15,7 @@ public class JoystickScaler {
 
   public double in(double input) {
     // deadbands
-    if (0.1 < input && input < 0.1) {
+    if (-0.1 < input && input < 0.1) {
       return 0;
     }
     // there is a good reason for all the Math.abs on the next line.
