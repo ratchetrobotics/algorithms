@@ -9,7 +9,7 @@ public class JoystickScaler {
   private ResponseCurve responseCurve;
 
   public JoystickScaler() {
-    responseCurve = new ResponseCurve(new double[]{0.0, 0.25, 0.75, 1.0},
+    responseCurve = new ResponseCurve(new double[]{0.1, 0.25, 0.75, 1.0},
       new double[]{0.0, 0.3, 0.8, 1});
   }
 
