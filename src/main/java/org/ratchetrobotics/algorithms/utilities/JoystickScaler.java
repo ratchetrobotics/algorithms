@@ -22,6 +22,8 @@ public class JoystickScaler {
     // we clamp the input to [0, 1] from the joystick. then we clamp the output of .respond to [0, 1] as well.
     // this is to not have to manually mirror the response curve on [-1, 0].
     double response = Math.abs(responseCurve.respond(Math.abs(input)));
+    // fix pid windup
+    response = 0.7*response;
     // this line re-adds the correct sign. this makes it impossible for a screwy interpolation
     // to run motors in the wrong direction
     return (input > 0) ? (response) : (-response);
